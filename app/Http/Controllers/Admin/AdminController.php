@@ -57,20 +57,20 @@ class AdminController extends Controller
         return Menu::make('adminMenu', function ($menu) {
 
             $menu->add(__('admin.menu_title_content'),'#')->data('group', true)->data('permissions', ['SUPER_ADMINISTRATOR','PAGES_ACCESS']);
-            $menu->add(__('admin.menu_title_pages'), array('route' => ['pages.index']))->prepend('<i class="icon-home4"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','PAGES_ACCESS']);
-            $menu->add(__('admin.menu_title_seo_pages'), array('route' => ['seo.index']))->prepend('<i class="icon-home4"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','PAGES_ACCESS']);
-            $menu->add(__('admin.menu_title_users'), array('route' => ['users.index']))->prepend('<i class="icon-home4"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','USERS_ACCESS']);
-            $menu->add(__('admin.menu_title_roles'), array('route' => ['roles.index']))->prepend('<i class="icon-home4"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','ROLES_ACCESS']);
-            $menu->add(__('admin.menu_title_permissions'), array('route' => ['permissions.index']))->prepend('<i class="icon-home4"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','ROLES_ACCESS']);
-            $menu->add(__('admin.menu_title_faq'), array('route' => 'faq.index'))->prepend('<i class="icon-home4"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','FAQ_ACCESS']);
-            $menu->add(__('admin.menu_title_contacts'), array('route' => 'contacts.index'))->prepend('<i class="icon-home4"></i>')->data('permissions', ['SUPER_ADMINISTRATOR']);
+            $menu->add(__('admin.menu_title_pages'), array('route' => ['pages.index']))->prepend('<i class="icon-stack"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','PAGES_ACCESS']);
+            //$menu->add(__('admin.menu_title_seo_pages'), array('route' => ['seo.index']))->prepend('<i class="icon-home4"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','PAGES_ACCESS']);
+            $menu->add(__('admin.menu_title_users'), array('route' => ['users.index']))->prepend('<i class="icon-user"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','USERS_ACCESS']);
+            $menu->add(__('admin.menu_title_roles'), array('route' => ['roles.index']))->prepend('<i class="icon-reading"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','ROLES_ACCESS']);
+            $menu->add(__('admin.menu_title_permissions'), array('route' => ['permissions.index']))->prepend('<i class="icon-user-lock"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','ROLES_ACCESS']);
+            $menu->add(__('admin.menu_title_faq'), array('route' => 'faq.index'))->prepend('<i class="icon-compose"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','FAQ_ACCESS']);
+            $menu->add(__('admin.menu_title_contacts'), array('route' => 'contacts.index'))->prepend('<i class="icon-comment-discussion"></i>')->data('permissions', ['SUPER_ADMINISTRATOR']);
 
 
             $menu->add(__('admin.menu_title_system'),'#')->data('group', true)->data('permissions', ['SUPER_ADMINISTRATOR','SETTINGS_ACCESS','USERS_ACCESS','ROLES_ACCESS']);
-            $menu->add(__('admin.menu_title_settings'), array('route' => ['settings.index']))->prepend('<i class="icon-home4"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','SETTINGS_ACCESS']);
-            $menu->add(__('admin.menu_title_seo_google_container'), array('route' => ['scripts.index']))->prepend('<i class="icon-home4"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','SETTINGS_ACCESS']);
-            $menu->add(__('admin.menu_title_seo_robots'), array('route' => ['robots.index']))->prepend('<i class="icon-home4"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','SETTINGS_ACCESS']);
-            $menu->add(__('admin.menu_title_image_manager'), array('route' => ['ckfinder_examples','example' => 'full-page-open']))->prepend('<i class="icon-home4"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','SETTINGS_ACCESS']);
+            $menu->add(__('admin.menu_title_settings'), array('route' => ['settings.index']))->prepend('<i class="icon-cog5"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','SETTINGS_ACCESS']);
+            $menu->add(__('admin.menu_title_seo_google_container'), array('route' => ['scripts.index']))->prepend('<i class="icon-tree5"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','SETTINGS_ACCESS']);
+            $menu->add(__('admin.menu_title_seo_robots'), array('route' => ['robots.index']))->prepend('<i class="icon-lifebuoy"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','SETTINGS_ACCESS']);
+            $menu->add(__('admin.menu_title_image_manager'), array('route' => ['ckfinder_examples','example' => 'full-page-open']))->prepend('<i class="icon-file-text2"></i>')->data('permissions', ['SUPER_ADMINISTRATOR','SETTINGS_ACCESS']);
 
         })->filter(function ($item) {
 
